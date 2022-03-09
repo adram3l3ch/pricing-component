@@ -189,7 +189,7 @@ body {
     transform: translateX(calc(-100% - var(--padding)));
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1100px) {
     body {
         background: url("./images/bg-top.svg") no-repeat right top,
             url("./images/bg-bottom.svg") left bottom no-repeat, hsl(240, 78%, 98%);
