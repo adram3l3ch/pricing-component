@@ -13,53 +13,60 @@
         <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
-        <header class="header">
-            <h1>Our Pricing</h1>
-        </header>
-        <div class="toggle">
-            <p>Annually</p>
-            <input type="checkbox" id="toggle" />
-            <label for="toggle" id="label" aria-label="toggle-bar"></label>
-            <p>Monthly</p>
-        </div>
-        <section class="cards">
-            <article class="card">
-                <h2 class="card__title">Basic</h2>
-                <h3 class="card__price">
-                    $<span class="ann">199.99</span><span class="mon hide">19.99</span>
-                </h3>
-                <div class="card__description">
-                    <p>500 GB Storage</p>
-                    <p>2 Users Allowed</p>
-                    <p>Send uo to 3 GB</p>
-                </div>
-                <button class="card__btn">Learn More</button>
+        <main class="main">
+            <header class="header">
+                <h1>Our Pricing</h1>
+            </header>
+            <article class="toggle">
+                <h2 style="position: absolute; left: -9999999px">Toggle</h2>
+                <p>Annually</p>
+                <input type="checkbox" id="toggle" />
+                <label for="toggle" id="label" aria-label="toggle-bar"></label>
+                <p>Monthly</p>
             </article>
-            <article class="card professional">
-                <h2 class="card__title">Professional</h2>
-                <h3 class="card__price">
-                    $<span class="ann">249.99</span><span class="mon hide">24.99</span>
-                </h3>
-                <div class="card__description">
-                    <p>1 TB Storage</p>
-                    <p>5 Users Allowed</p>
-                    <p>Send uo to 10 GB</p>
-                </div>
-                <button class="card__btn">Learn More</button>
-            </article>
-            <article class="card">
-                <h2 class="card__title">Master</h2>
-                <h3 class="card__price">
-                    $<span class="ann">399.99</span><span class="mon hide">39.99</span>
-                </h3>
-                <div class="card__description">
-                    <p>2 TB Storage</p>
-                    <p>10 Users Allowed</p>
-                    <p>Send uo to 20 GB</p>
-                </div>
-                <button class="card__btn">Learn More</button>
-            </article>
-        </section>
+            <section class="cards">
+                <h2 style="position: absolute; left: -9999999px">Toggle</h2>
+                <article class="card">
+                    <h2 class="card__title">Basic</h2>
+                    <h3 class="card__price">
+                        $<span class="ann">199.99</span
+                        ><span class="mon hide">19.99</span>
+                    </h3>
+                    <div class="card__description">
+                        <p>500 GB Storage</p>
+                        <p>2 Users Allowed</p>
+                        <p>Send uo to 3 GB</p>
+                    </div>
+                    <button class="card__btn">Learn More</button>
+                </article>
+                <article class="card professional">
+                    <h2 class="card__title">Professional</h2>
+                    <h3 class="card__price">
+                        $<span class="ann">249.99</span
+                        ><span class="mon hide">24.99</span>
+                    </h3>
+                    <div class="card__description">
+                        <p>1 TB Storage</p>
+                        <p>5 Users Allowed</p>
+                        <p>Send uo to 10 GB</p>
+                    </div>
+                    <button class="card__btn">Learn More</button>
+                </article>
+                <article class="card">
+                    <h2 class="card__title">Master</h2>
+                    <h3 class="card__price">
+                        $<span class="ann">399.99</span
+                        ><span class="mon hide">39.99</span>
+                    </h3>
+                    <div class="card__description">
+                        <p>2 TB Storage</p>
+                        <p>10 Users Allowed</p>
+                        <p>Send uo to 20 GB</p>
+                    </div>
+                    <button class="card__btn">Learn More</button>
+                </article>
+            </section>
+        </main>
 
         <script>
             const toggle = document.querySelector("#toggle");
