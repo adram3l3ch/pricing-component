@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("./images/bg-top.svg") no-repeat right -40vw top, hsl(240, 78%, 98%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 22rem;
+}
+
+.card {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: white;
+}
+
+.card__title {
+    color: hsl(233, 13%, 49%);
+    font-size: 1rem;
+}
+
+.card__price {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card__price span {
+    font-size: 4rem;
+    color: hsl(232, 13%, 33%);
+}
+
+.card__price:not(span) {
+    font-size: 2rem;
+    color: hsl(232, 13%, 33%);
+}
+
+.hide {
+    display: none;
+}
+
+.card__description {
+    border: 1px solid transparent;
+    border-bottom-color: hsla(234, 22%, 82%, 0.559);
+    border-top-color: hsla(234, 22%, 82%, 0.559);
+    width: 100%;
+    text-align: center;
+}
+
+.card__description p {
+    padding-block: 1rem;
+    color: hsl(233, 13%, 49%);
+}
+
+.card__description p:not(:last-child) {
+    border-bottom: 1px solid hsla(234, 22%, 82%, 0.559);
+}
+
+.card__btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border: none;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    color: white;
+    font-family: inherit;
+    margin-top: 0.5rem;
+}
+
+.professional.card {
+    background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+.professional.card .card__title {
+    color: hsl(240, 78%, 98%);
+}
+
+.professional.card .card__price,
+.professional.card .card__price span {
+    color: white;
+}
+
+.professional.card .card__description p {
+    color: hsl(240, 78%, 98%);
+}
+
+.professional.card .card__btn {
+    background: white;
+    color: hsl(237, 63%, 64%);
+}
+
+/* toggle */
+
+:root {
+    --primary: 120, 100%, 40%;
+    --width: 3.5rem;
+}
+
+.header h1 {
+    color: hsl(233, 13%, 49%);
+}
+
+.toggle {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.toggle p {
+    color: hsl(234, 14%, 74%);
+}
+
+#label {
+    width: var(--width);
+    display: inline-block;
+    aspect-ratio: 1.8;
+    border-radius: 10rem;
+    background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    position: relative;
+    cursor: pointer;
+}
+
+#label::after {
+    --padding: 0.3rem;
+    content: "";
+    position: absolute;
+    top: var(--padding);
+    height: calc(var(--width) / 1.8 - 2 * var(--padding));
+    left: var(--padding);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: white;
+    transition: all 0.2s ease-in;
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle:checked + label::after {
+    left: 100%;
+    transform: translateX(calc(-100% - var(--padding)));
+}
+
+@media (min-width: 800px) {
+    body {
+        background: url("./images/bg-top.svg") no-repeat right top,
+            url("./images/bg-bottom.svg") left bottom no-repeat, hsl(240, 78%, 98%);
+    }
+    .cards {
+        flex-direction: row;
+        max-width: 100%;
+        justify-content: center;
+        gap: 1.5rem;
+        align-items: center;
+        gap: 0;
+    }
+    .card {
+        max-width: 22rem;
+    }
+    .card:not(.professional) {
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.034);
+    }
+    .professional.card {
+        padding: 4rem 2rem;
+    }
+    .card__title {
+        font-size: 1.2rem;
+    }
+    .card__price {
+        margin-bottom: 1rem;
+    }
+
+    .card__price span {
+        font-size: 4.5rem;
+    }
+    .card__price:not(span) {
+        font-size: 2.5rem;
+    }
+    .card__btn {
+        margin-top: 1rem;
+        letter-spacing: 0.1em;
+    }
+}
+
+@media (max-width: 300px) {
+    :root {
+        font-size: 10px;
+    }
+}
